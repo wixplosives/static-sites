@@ -4,7 +4,7 @@
       "static-deployer/wcs-static-deployer-integration",
       {
         "scopedName": "static-deployer/wcs-static-deployer-integration",
-        "filePath": "../feature/wcs-static-deployer-integration.feature",
+        "filePath": "@wixc3/static-deployer-feature/feature/wcs-static-deployer-integration.feature",
         "envFilePaths": {},
         "contextFilePaths": {},
         "preloadFilePaths": {},
