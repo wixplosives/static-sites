@@ -138,8 +138,7 @@
           "typescript/typescript-compiler",
           "component-code-editor",
           "platform-capabilities",
-          "home-screen",
-          "feedback-menu"
+          "home-screen"
         ],
         "exportedEnvs": [],
         "resolvedContexts": {
@@ -335,7 +334,8 @@
         "preloadFilePaths": {},
         "dependencies": [
           "react-renderer",
-          "storage"
+          "storage",
+          "shortcuts"
         ],
         "exportedEnvs": [],
         "resolvedContexts": {
@@ -801,26 +801,6 @@
       }
     ],
     [
-      "feedback-menu",
-      {
-        "scopedName": "feedback-menu",
-        "filePath": "@wixc3/feedback-menu-feature/feature/feedback-menu.feature",
-        "envFilePaths": {
-          "main": "@wixc3/feedback-menu-feature/feature/feedback-menu.main.env"
-        },
-        "contextFilePaths": {},
-        "preloadFilePaths": {},
-        "dependencies": [
-          "gui"
-        ],
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window"
-        },
-        "packageName": "@wixc3/feedback-menu-feature"
-      }
-    ],
-    [
       "symbol-schema-extract",
       {
         "scopedName": "symbol-schema-extract",
@@ -958,6 +938,22 @@
       }
     ],
     [
+      "shortcuts",
+      {
+        "scopedName": "shortcuts",
+        "filePath": "@wixc3/shortcuts-feature/feature/shortcuts.feature",
+        "envFilePaths": {
+          "main": "@wixc3/shortcuts-feature/feature/shortcuts.main.env"
+        },
+        "contextFilePaths": {},
+        "preloadFilePaths": {},
+        "dependencies": [],
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/shortcuts-feature"
+      }
+    ],
+    [
       "code-languages",
       {
         "scopedName": "code-languages",
@@ -1041,7 +1037,8 @@
           "project",
           "compilation",
           "engine-resources/resource",
-          "simulation-capabilities"
+          "simulation-capabilities",
+          "shortcuts"
         ],
         "exportedEnvs": [
           {
