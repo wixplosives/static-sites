@@ -748,10 +748,7 @@
         "dependencies": [
           "project",
           "file-components",
-          "git-revision",
-          "gui",
-          "simulation-edit-view/simulation",
-          "simulation-capabilities"
+          "gui"
         ],
         "exportedEnvs": [],
         "resolvedContexts": {
