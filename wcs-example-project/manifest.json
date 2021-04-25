@@ -1149,5 +1149,6 @@
   ],
   "defaultConfigName": "static-deployer/production",
   "defaultFeatureName": "static-deployer/wcs-static-deployer-integration",
-  "entryPoints": {}
+  "entryPoints": {},
+  "externalsFilePath": "/external-features.json"
 }
