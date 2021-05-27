@@ -8,7 +8,7 @@
           "assets",
           "component-playground"
         ],
-        "filePath": "@wixc3/static-deployer-feature/feature/wcs-static-deployer-integration.feature",
+        "filePath": "../npm/feature/wcs-static-deployer-integration.feature",
         "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -982,7 +982,8 @@
         "dependencies": [
           "project",
           "gui",
-          "storage"
+          "storage",
+          "shortcuts"
         ],
         "filePath": "@wixc3/project-ui-feature/feature/project-ui.feature",
         "envFilePaths": {
