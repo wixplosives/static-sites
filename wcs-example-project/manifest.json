@@ -405,15 +405,22 @@
           "code-languages",
           "compilation",
           "code-execution",
-          "css-modules"
+          "css-modules",
+          "engine-core/communication"
         ],
         "filePath": "@wixc3/sass-feature/feature/sass.feature",
         "envFilePaths": {
           "main": "@wixc3/sass-feature/feature/sass.main.env",
-          "processing": "@wixc3/sass-feature/feature/sass.processing.env"
+          "processing": "@wixc3/sass-feature/feature/sass.processing.env",
+          "sass": "@wixc3/sass-feature/feature/sass.sass.env"
         },
         "preloadFilePaths": {},
-        "exportedEnvs": [],
+        "exportedEnvs": [
+          {
+            "name": "sass",
+            "type": "node"
+          }
+        ],
         "resolvedContexts": {
           "main": "window",
           "processing": "worker"
