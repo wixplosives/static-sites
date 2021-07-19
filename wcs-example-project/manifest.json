@@ -154,13 +154,13 @@
         "contextFilePaths": {},
         "dependencies": [
           "project",
+          "project-analyzer",
           "git-revision",
           "file-components",
           "simple-ast",
           "typescript",
           "typescript/typescript-compiler",
-          "simulation-discovery",
-          "file-assets"
+          "simulation-discovery"
         ],
         "filePath": "@wixc3/simulation-capabilities-feature/feature/simulation-capabilities.feature",
         "envFilePaths": {
@@ -258,8 +258,7 @@
           "project",
           "code-languages",
           "compilation",
-          "code-execution",
-          "file-assets"
+          "code-execution"
         ],
         "filePath": "@wixc3/typescript-feature/feature/typescript.feature",
         "envFilePaths": {
@@ -526,13 +525,11 @@
         "contextFilePaths": {},
         "dependencies": [
           "project",
+          "project-analyzer",
           "simple-ast",
           "simulation-discovery",
           "job-manager",
-          "gui",
-          "typescript-assets",
-          "typescript",
-          "file-assets"
+          "gui"
         ],
         "filePath": "@wixc3/file-components-feature/feature/file-components.feature",
         "envFilePaths": {
@@ -752,12 +749,12 @@
         "dependencies": [
           "project",
           "file-components",
-          "gui",
-          "typescript-assets"
+          "gui"
         ],
         "filePath": "@wixc3/components-panel-feature/feature/components-panel.feature",
         "envFilePaths": {
-          "main": "@wixc3/components-panel-feature/feature/components-panel.main.env"
+          "main": "@wixc3/components-panel-feature/feature/components-panel.main.env",
+          "processing": "@wixc3/components-panel-feature/feature/components-panel.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -836,33 +833,6 @@
       }
     ],
     [
-      "typescript-assets",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "typescript",
-          "project",
-          "engine-resources/resource",
-          "file-assets",
-          "code-execution",
-          "typescript/typescript-compiler"
-        ],
-        "filePath": "@wixc3/typescript-assets-feature/feature/typescript-assets.feature",
-        "envFilePaths": {
-          "main": "@wixc3/typescript-assets-feature/feature/typescript-assets.main.env",
-          "processing": "@wixc3/typescript-assets-feature/feature/typescript-assets.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/typescript-assets-feature",
-        "scopedName": "typescript-assets"
-      }
-    ],
-    [
       "simple-ast",
       {
         "contextFilePaths": {},
@@ -887,16 +857,18 @@
       }
     ],
     [
-      "file-assets",
+      "project-analyzer",
       {
         "contextFilePaths": {},
         "dependencies": [
           "project",
-          "engine-resources/resource"
+          "typescript",
+          "engine-resources/resource",
+          "job-manager"
         ],
-        "filePath": "@wixc3/file-assets-feature/feature/file-assets.feature",
+        "filePath": "@wixc3/project-analyzer/feature/project-analyzer.feature",
         "envFilePaths": {
-          "processing": "@wixc3/file-assets-feature/feature/file-assets.processing.env"
+          "processing": "@wixc3/project-analyzer/feature/project-analyzer.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -904,8 +876,8 @@
           "main": "window",
           "processing": "worker"
         },
-        "packageName": "@wixc3/file-assets-feature",
-        "scopedName": "file-assets"
+        "packageName": "@wixc3/project-analyzer",
+        "scopedName": "project-analyzer"
       }
     ],
     [
@@ -937,10 +909,11 @@
         "contextFilePaths": {},
         "dependencies": [
           "project",
-          "file-assets"
+          "project-analyzer"
         ],
         "filePath": "@wixc3/simulation-discovery-feature/feature/simulation-discovery.feature",
         "envFilePaths": {
+          "main": "@wixc3/simulation-discovery-feature/feature/simulation-discovery.main.env",
           "processing": "@wixc3/simulation-discovery-feature/feature/simulation-discovery.processing.env"
         },
         "preloadFilePaths": {},
@@ -1093,8 +1066,7 @@
           "gui",
           "file-components",
           "project",
-          "symbol-schema-extract",
-          "typescript-assets"
+          "symbol-schema-extract"
         ],
         "filePath": "@wixc3/component-tab-feature/feature/component-tab.feature",
         "envFilePaths": {
