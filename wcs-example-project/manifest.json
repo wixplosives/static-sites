@@ -89,7 +89,7 @@
           "stylable/stylable-compiler",
           "sass",
           "project",
-          "static-server",
+          "user-application-server",
           "code-execution",
           "css-modules"
         ],
@@ -128,17 +128,19 @@
           "simulation-edit-view/simulation",
           "simulation-props-editor",
           "simulation-env-editor",
-          "stylable",
+          "stylable/stylable-language-service",
           "stylable/stylable-compiler",
           "typescript",
           "typescript/typescript-compiler",
           "component-code-editor",
           "platform-capabilities",
-          "home-screen"
+          "home-screen",
+          "env-logger"
         ],
         "filePath": "@wixc3/component-playground/dist/feature/component-playground.feature",
         "envFilePaths": {
-          "main": "@wixc3/component-playground/dist/feature/component-playground.main.env"
+          "main": "@wixc3/component-playground/dist/feature/component-playground.main.env",
+          "processing": "@wixc3/component-playground/dist/feature/component-playground.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -181,52 +183,6 @@
       }
     ],
     [
-      "stylable/stylable-compiler",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "compilation",
-          "code-execution"
-        ],
-        "filePath": "@wixc3/stylable-feature/dist/feature/stylable-compiler.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/stylable-feature/dist/feature/stylable-compiler.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/stylable-feature",
-        "scopedName": "stylable/stylable-compiler"
-      }
-    ],
-    [
-      "stylable",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "project",
-          "code-languages"
-        ],
-        "filePath": "@wixc3/stylable-feature/dist/feature/stylable.feature",
-        "envFilePaths": {
-          "main": "@wixc3/stylable-feature/dist/feature/stylable.main.env",
-          "processing": "@wixc3/stylable-feature/dist/feature/stylable.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/stylable-feature",
-        "scopedName": "stylable"
-      }
-    ],
-    [
       "typescript/typescript-compiler",
       {
         "contextFilePaths": {},
@@ -262,7 +218,8 @@
           "code-languages",
           "compilation",
           "code-execution",
-          "file-assets"
+          "file-assets",
+          "env-logger"
         ],
         "filePath": "@wixc3/typescript-feature/dist/feature/typescript.feature",
         "envFilePaths": {
@@ -401,7 +358,7 @@
           "gui",
           "project",
           "engine-resources/resource",
-          "static-server"
+          "user-application-server"
         ],
         "filePath": "@wixc3/compilation-feature/dist/feature/compilation.feature",
         "envFilePaths": {
@@ -478,21 +435,90 @@
       }
     ],
     [
-      "static-server",
+      "stylable/stylable-compiler",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "stylable",
+          "compilation",
+          "code-execution"
+        ],
+        "filePath": "@wixc3/stylable-feature/dist/feature/stylable-compiler.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/stylable-feature/dist/feature/stylable-compiler.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/stylable-feature",
+        "scopedName": "stylable/stylable-compiler"
+      }
+    ],
+    [
+      "stylable/stylable-language-service",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "code-languages",
+          "stylable"
+        ],
+        "filePath": "@wixc3/stylable-feature/dist/feature/stylable-language-service.feature",
+        "envFilePaths": {
+          "main": "@wixc3/stylable-feature/dist/feature/stylable-language-service.main.env",
+          "processing": "@wixc3/stylable-feature/dist/feature/stylable-language-service.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/stylable-feature",
+        "scopedName": "stylable/stylable-language-service"
+      }
+    ],
+    [
+      "stylable",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project"
+        ],
+        "filePath": "@wixc3/stylable-feature/dist/feature/stylable.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/stylable-feature/dist/feature/stylable.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/stylable-feature",
+        "scopedName": "stylable"
+      }
+    ],
+    [
+      "user-application-server",
       {
         "contextFilePaths": {
-          "processing/live-server": "@wixc3/static-server-feature/dist/feature/static-server.processing.live-server.context"
+          "processing/live-server": "@wixc3/user-application-server-feature/dist/feature/user-application-server.processing.live-server.context",
+          "processing/worker": "@wixc3/user-application-server-feature/dist/feature/user-application-server.processing.worker.context"
         },
         "dependencies": [],
-        "filePath": "@wixc3/static-server-feature/dist/feature/static-server.feature",
+        "filePath": "@wixc3/user-application-server-feature/dist/feature/user-application-server.feature",
         "envFilePaths": {
-          "processing": "@wixc3/static-server-feature/dist/feature/static-server.processing.env"
+          "processing": "@wixc3/user-application-server-feature/dist/feature/user-application-server.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {},
-        "packageName": "@wixc3/static-server-feature",
-        "scopedName": "static-server"
+        "packageName": "@wixc3/user-application-server-feature",
+        "scopedName": "user-application-server"
       }
     ],
     [
@@ -510,6 +536,7 @@
         ],
         "filePath": "@wixc3/code-execution-feature/dist/feature/code-execution.feature",
         "envFilePaths": {
+          "main": "@wixc3/code-execution-feature/dist/feature/code-execution.main.env",
           "processing": "@wixc3/code-execution-feature/dist/feature/code-execution.processing.env"
         },
         "preloadFilePaths": {},
@@ -579,6 +606,7 @@
         "dependencies": [
           "project",
           "simple-ast",
+          "demo-discovery",
           "simulation-discovery",
           "job-manager",
           "gui",
@@ -677,7 +705,8 @@
         "contextFilePaths": {},
         "dependencies": [
           "simulation-edit-view/simulation",
-          "simulation-preview"
+          "simulation-preview",
+          "platform-capabilities"
         ],
         "filePath": "@wixc3/simulation-log-feature/dist/feature/simulation-log.feature",
         "envFilePaths": {
@@ -705,11 +734,14 @@
           "project",
           "symbol-schema-extract",
           "simulation-capabilities",
-          "simulation-preview"
+          "simulation-preview",
+          "analytics",
+          "shortcuts"
         ],
         "filePath": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.feature",
         "envFilePaths": {
-          "main": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.main.env"
+          "main": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.main.env",
+          "preview": "@wixc3/simulation-edit-view-feature/dist/feature/simulation.preview.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -863,6 +895,30 @@
       }
     ],
     [
+      "env-logger",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "gui",
+          "shortcuts"
+        ],
+        "filePath": "@wixc3/env-logger-feature/dist/feature/env-logger.feature",
+        "envFilePaths": {
+          "main": "@wixc3/env-logger-feature/dist/feature/env-logger.main.env",
+          "processing": "@wixc3/env-logger-feature/dist/feature/env-logger.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/env-logger-feature",
+        "scopedName": "env-logger"
+      }
+    ],
+    [
       "symbol-schema-extract",
       {
         "contextFilePaths": {
@@ -990,6 +1046,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
+          "discovery",
           "project",
           "file-assets"
         ],
@@ -1067,19 +1124,26 @@
       }
     ],
     [
-      "shortcuts",
+      "demo-discovery",
       {
         "contextFilePaths": {},
-        "dependencies": [],
-        "filePath": "@wixc3/shortcuts-feature/dist/feature/shortcuts.feature",
+        "dependencies": [
+          "discovery",
+          "project",
+          "file-assets"
+        ],
+        "filePath": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.feature",
         "envFilePaths": {
-          "main": "@wixc3/shortcuts-feature/dist/feature/shortcuts.main.env"
+          "processing": "@wixc3/demo-discovery-feature/dist/feature/demo-discovery.processing.env"
         },
         "preloadFilePaths": {},
         "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/shortcuts-feature",
-        "scopedName": "shortcuts"
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/demo-discovery-feature",
+        "scopedName": "demo-discovery"
       }
     ],
     [
@@ -1094,7 +1158,8 @@
           "compilation",
           "engine-resources/resource",
           "simulation-capabilities",
-          "shortcuts"
+          "shortcuts",
+          "env-logger"
         ],
         "filePath": "@wixc3/simulation-preview-feature/dist/feature/simulation-preview.feature",
         "envFilePaths": {
@@ -1174,6 +1239,22 @@
       }
     ],
     [
+      "shortcuts",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/shortcuts-feature/dist/feature/shortcuts.feature",
+        "envFilePaths": {
+          "main": "@wixc3/shortcuts-feature/dist/feature/shortcuts.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/shortcuts-feature",
+        "scopedName": "shortcuts"
+      }
+    ],
+    [
       "project-ui",
       {
         "contextFilePaths": {},
@@ -1224,7 +1305,6 @@
           "file-components",
           "project",
           "symbol-schema-extract",
-          "typescript-assets",
           "project-ui"
         ],
         "filePath": "@wixc3/component-tab-feature/dist/feature/component-tab.feature",
@@ -1314,6 +1394,28 @@
         },
         "packageName": "@wixc3/git-commands-feature",
         "scopedName": "git-commands"
+      }
+    ],
+    [
+      "discovery",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "project",
+          "file-assets"
+        ],
+        "filePath": "@wixc3/discovery-feature/dist/feature/discovery.feature",
+        "envFilePaths": {
+          "processing": "@wixc3/discovery-feature/dist/feature/discovery.processing.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "main": "window",
+          "processing": "worker"
+        },
+        "packageName": "@wixc3/discovery-feature",
+        "scopedName": "discovery"
       }
     ]
   ],
