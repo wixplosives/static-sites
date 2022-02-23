@@ -911,7 +911,6 @@
           "project",
           "sass",
           "simple-ast",
-          "css-modules",
           "code-execution"
         ],
         "filePath": "@wixc3/sass-editing-feature/dist/feature/sass-editing.feature",
