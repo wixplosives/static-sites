@@ -189,6 +189,20 @@
       }
     ],
     [
+      "analytics",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/analytics-feature/dist/feature/analytics.feature",
+        "envFilePaths": {},
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/analytics-feature",
+        "scopedName": "analytics"
+      }
+    ],
+    [
       "typescript/typescript-compiler",
       {
         "contextFilePaths": {},
@@ -258,20 +272,6 @@
         "resolvedContexts": {},
         "packageName": "@wixc3/engine-resources",
         "scopedName": "engine-resources/resource"
-      }
-    ],
-    [
-      "analytics",
-      {
-        "contextFilePaths": {},
-        "dependencies": [],
-        "filePath": "@wixc3/analytics-feature/dist/feature/analytics.feature",
-        "envFilePaths": {},
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/analytics-feature",
-        "scopedName": "analytics"
       }
     ],
     [
