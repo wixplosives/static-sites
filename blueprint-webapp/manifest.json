@@ -8,7 +8,7 @@
           "assets",
           "component-playground/hosted"
         ],
-        "filePath": "../../dist/feature/production-fullstory.feature",
+        "filePath": "../dist/feature/production-fullstory.feature",
         "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
