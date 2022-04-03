@@ -1,14 +1,14 @@
 {
   "features": [
     [
-      "static-deployer/wcs-static-deployer-production-integration",
+      "static-deployer/production-fullstory",
       {
         "contextFilePaths": {},
         "dependencies": [
           "assets",
-          "component-playground"
+          "component-playground/hosted"
         ],
-        "filePath": "../dist/feature/wcs-static-deployer-production-integration.feature",
+        "filePath": "../../dist/feature/production-fullstory.feature",
         "envFilePaths": {},
         "preloadFilePaths": {},
         "exportedEnvs": [],
@@ -17,7 +17,28 @@
           "main": "window"
         },
         "packageName": "@wixc3/static-deployer-feature",
-        "scopedName": "static-deployer/wcs-static-deployer-production-integration"
+        "scopedName": "static-deployer/production-fullstory"
+      }
+    ],
+    [
+      "component-playground/hosted",
+      {
+        "contextFilePaths": {},
+        "dependencies": [
+          "component-playground",
+          "fullstory",
+          "analytics"
+        ],
+        "filePath": "@wixc3/component-playground/dist/fixtures/hosted.feature",
+        "envFilePaths": {},
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {
+          "processing": "worker",
+          "main": "window"
+        },
+        "packageName": "@wixc3/component-playground",
+        "scopedName": "component-playground/hosted"
       }
     ],
     [
@@ -186,6 +207,22 @@
         },
         "packageName": "@wixc3/simulation-capabilities-feature",
         "scopedName": "simulation-capabilities"
+      }
+    ],
+    [
+      "fullstory",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/fullstory-feature/dist/feature/fullstory.feature",
+        "envFilePaths": {
+          "main": "@wixc3/fullstory-feature/dist/feature/fullstory.main.env"
+        },
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/fullstory-feature",
+        "scopedName": "fullstory"
       }
     ],
     [
@@ -1674,7 +1711,7 @@
     ]
   ],
   "defaultConfigName": "static-deployer/production",
-  "defaultFeatureName": "static-deployer/wcs-static-deployer-production-integration",
+  "defaultFeatureName": "static-deployer/production-fullstory",
   "entryPoints": {},
   "externalsFilePath": "/external-features.json"
 }
