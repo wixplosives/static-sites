@@ -9,7 +9,9 @@
           "component-playground"
         ],
         "filePath": "../dist/feature/wcs-static-deployer-production-integration.feature",
-        "envFilePaths": {},
+        "envFilePaths": {
+          "main": "../dist/feature/wcs-static-deployer-production-integration.main.env"
+        },
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
@@ -182,9 +184,7 @@
           "simple-ast",
           "typescript",
           "typescript/typescript-compiler",
-          "simulation-discovery",
-          "file-assets",
-          "code-execution"
+          "file-assets"
         ],
         "filePath": "@wixc3/simulation-capabilities-feature/dist/feature/simulation-capabilities.feature",
         "envFilePaths": {
@@ -199,6 +199,20 @@
         },
         "packageName": "@wixc3/simulation-capabilities-feature",
         "scopedName": "simulation-capabilities"
+      }
+    ],
+    [
+      "analytics",
+      {
+        "contextFilePaths": {},
+        "dependencies": [],
+        "filePath": "@wixc3/analytics-feature/dist/feature/analytics.feature",
+        "envFilePaths": {},
+        "preloadFilePaths": {},
+        "exportedEnvs": [],
+        "resolvedContexts": {},
+        "packageName": "@wixc3/analytics-feature",
+        "scopedName": "analytics"
       }
     ],
     [
@@ -271,20 +285,6 @@
         "resolvedContexts": {},
         "packageName": "@wixc3/engine-resources",
         "scopedName": "engine-resources/resource"
-      }
-    ],
-    [
-      "analytics",
-      {
-        "contextFilePaths": {},
-        "dependencies": [],
-        "filePath": "@wixc3/analytics-feature/dist/feature/analytics.feature",
-        "envFilePaths": {},
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {},
-        "packageName": "@wixc3/analytics-feature",
-        "scopedName": "analytics"
       }
     ],
     [
@@ -549,10 +549,23 @@
         "filePath": "@wixc3/code-execution-feature/dist/feature/code-execution.feature",
         "envFilePaths": {
           "main": "@wixc3/code-execution-feature/dist/feature/code-execution.main.env",
-          "processing": "@wixc3/code-execution-feature/dist/feature/code-execution.processing.env"
+          "processing": "@wixc3/code-execution-feature/dist/feature/code-execution.processing.env",
+          "window-renderer": "@wixc3/code-execution-feature/dist/feature/code-execution.window-renderer.env"
         },
         "preloadFilePaths": {},
-        "exportedEnvs": [],
+        "exportedEnvs": [
+          {
+            "name": "window-renderer",
+            "type": "iframe",
+            "env": {
+              "env": "window-renderer",
+              "envType": "iframe",
+              "endpointType": "multi",
+              "dependencies": []
+            },
+            "flatDependencies": []
+          }
+        ],
         "resolvedContexts": {
           "main": "window",
           "processing": "worker"
@@ -599,9 +612,7 @@
           "editing",
           "simple-ast",
           "gui",
-          "simulation-discovery",
           "demo-discovery",
-          "simulation-to-jsx",
           "typescript-assets"
         ],
         "filePath": "@wixc3/add-panel-feature/dist/feature/add-panel.feature",
@@ -750,7 +761,6 @@
           "project",
           "simple-ast",
           "demo-discovery",
-          "simulation-discovery",
           "job-manager",
           "gui",
           "typescript-assets",
@@ -804,7 +814,8 @@
           "simulation-capabilities",
           "file-components",
           "simulation-edit-view/simulation",
-          "platform-capabilities"
+          "platform-capabilities",
+          "project"
         ],
         "filePath": "@wixc3/home-screen/dist/feature/home-screen.feature",
         "envFilePaths": {
@@ -847,7 +858,7 @@
       {
         "contextFilePaths": {},
         "dependencies": [
-          "components-panel",
+          "home-screen",
           "project",
           "gui",
           "simulation-capabilities",
@@ -1003,10 +1014,9 @@
         "contextFilePaths": {},
         "dependencies": [
           "code-editor",
-          "component-tab",
-          "file-components",
           "gui",
           "project",
+          "project-ui",
           "symbol-schema-extract",
           "simulation-capabilities",
           "simulation-preview",
@@ -1106,9 +1116,28 @@
               "env": "preview",
               "envType": "iframe",
               "endpointType": "multi",
-              "dependencies": []
+              "dependencies": [
+                {
+                  "env": "window-renderer",
+                  "envType": "iframe",
+                  "endpointType": "multi",
+                  "dependencies": []
+                }
+              ]
             },
-            "flatDependencies": []
+            "flatDependencies": [
+              {
+                "name": "window-renderer",
+                "type": "iframe",
+                "env": {
+                  "env": "window-renderer",
+                  "envType": "iframe",
+                  "endpointType": "multi",
+                  "dependencies": []
+                },
+                "flatDependencies": []
+              }
+            ]
           }
         ],
         "resolvedContexts": {
@@ -1293,29 +1322,6 @@
       }
     ],
     [
-      "simulation-discovery",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "discovery",
-          "project",
-          "file-assets"
-        ],
-        "filePath": "@wixc3/simulation-discovery-feature/dist/feature/simulation-discovery.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/simulation-discovery-feature/dist/feature/simulation-discovery.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/simulation-discovery-feature",
-        "scopedName": "simulation-discovery"
-      }
-    ],
-    [
       "react-resources",
       {
         "contextFilePaths": {},
@@ -1447,28 +1453,6 @@
       }
     ],
     [
-      "simulation-to-jsx",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "simple-ast",
-          "project"
-        ],
-        "filePath": "@wixc3/simulation-to-jsx-feature/dist/feature/simulation-to-jsx.feature",
-        "envFilePaths": {
-          "processing": "@wixc3/simulation-to-jsx-feature/dist/feature/simulation-to-jsx.processing.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "main": "window",
-          "processing": "worker"
-        },
-        "packageName": "@wixc3/simulation-to-jsx-feature",
-        "scopedName": "simulation-to-jsx"
-      }
-    ],
-    [
       "project-ui",
       {
         "contextFilePaths": {},
@@ -1575,7 +1559,6 @@
           "gui",
           "project",
           "project-ui",
-          "component-tab",
           "symbol-schema-extract"
         ],
         "filePath": "@wixc3/autodocs-feature/dist/feature/autodocs.feature",
@@ -1585,8 +1568,8 @@
         "preloadFilePaths": {},
         "exportedEnvs": [],
         "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
+          "main": "window",
+          "processing": "worker"
         },
         "packageName": "@wixc3/autodocs-feature",
         "scopedName": "autodocs"
@@ -1616,32 +1599,6 @@
         },
         "packageName": "@wixc3/simulation-suggestions-feature",
         "scopedName": "simulation-suggestions"
-      }
-    ],
-    [
-      "component-tab",
-      {
-        "contextFilePaths": {},
-        "dependencies": [
-          "gui",
-          "file-components",
-          "project",
-          "symbol-schema-extract",
-          "project-ui",
-          "simulation-capabilities"
-        ],
-        "filePath": "@wixc3/component-tab-feature/dist/feature/component-tab.feature",
-        "envFilePaths": {
-          "main": "@wixc3/component-tab-feature/dist/feature/component-tab.main.env"
-        },
-        "preloadFilePaths": {},
-        "exportedEnvs": [],
-        "resolvedContexts": {
-          "processing": "worker",
-          "main": "window"
-        },
-        "packageName": "@wixc3/component-tab-feature",
-        "scopedName": "component-tab"
       }
     ],
     [
